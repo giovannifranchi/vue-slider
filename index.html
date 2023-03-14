@@ -14,10 +14,10 @@
     <div id="app">
 
         <div class="container" v-clock>
-            <div class="slider-wrapper" tabindex="0">
+            <div class="slider-wrapper" tabindex="0"></div>
 
-                <div class="item">
-                    <img :src="imgs[activeImg].image" :alt="imgs[activeImg].title" />
+                <div class="item" v-on:mouseover="stopInterval" v-on:mouseleave="startInterval">
+                    <img :src="imgs[activeImg].image" :alt="imgs[activeImg].title"/>
                     <div class="text">
                         <h3> {{ imgs[activeImg].title }} </h3>
                         <p> {{ imgs[activeImg].text }} </p>

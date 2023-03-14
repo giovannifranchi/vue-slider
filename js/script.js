@@ -51,9 +51,19 @@ createApp({
         },
         goToImg(index){
             this.activeImg = index;
+        },
+        stopInterval(){
+            clearInterval(this.changeImgInterval);
+        },
+        startInterval(){
+            this.changeImgInterval = setInterval(()=>{
+                this.nextImg();
+            },3000);;
         }
     },
     mounted(){
-        
+        this.changeImgInterval = setInterval(()=>{
+            this.nextImg();
+        },3000);
     }
 }).mount('#app');
