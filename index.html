@@ -15,7 +15,6 @@
 
         <div class="container" v-clock>
             <div class="slider-wrapper" tabindex="0"></div>
-
                 <div class="item" v-on:mouseover="stopInterval" v-on:mouseleave="startInterval">
                     <img :src="imgs[activeImg].image" :alt="imgs[activeImg].title"/>
                     <div class="text">
@@ -31,7 +30,6 @@
                         <img :src="img.image" :alt="img.title" @click="goToImg(index)"/>
                     </div>
                 </div>
-
             </div>
         </div>
 
